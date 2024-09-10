@@ -1,0 +1,15 @@
+== 2024-09-09
+
+# Recursive function to find the square root of a number
+def sqrt(x, guess=1.0, tolerance=0.001):
+    # Base case: if the guess is close enough, return it
+    if abs(guess * guess - x) < tolerance:
+        return guess
+    
+    # Recursive case: improve the guess and call the function again
+    new_guess = (guess + x / guess) / 2
+    return sqrt(x, new_guess, tolerance)
+
+# Example usage:
+# result = sqrt(16)
+# print(result)  # Output will be close to 4
