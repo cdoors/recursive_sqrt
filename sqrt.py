@@ -25,8 +25,6 @@ def sqrt(x, guess=1.0, tolerance=0.001):
     new_guess = (guess + x / guess) / 2
     return sqrt(x, new_guess, tolerance)
 
-
-
 if __name__ == "__main__":
     # Example usage:
     result = sqrt(16)
